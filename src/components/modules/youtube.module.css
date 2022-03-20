@@ -1,0 +1,19 @@
+.yt {
+    background-color: var(--smoky-black);
+    display: flex;
+    height: 60%;
+    flex-direction: column;
+}
+
+.player {
+    width: calc(100% + 60px);
+    margin-left: -30px;
+    min-height: 300px;
+    height: 100%;
+}
+
+@media screen and (max-width: 479px) {
+    .player {
+        max-height: 300px;
+    }
+}

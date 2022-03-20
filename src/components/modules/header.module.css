@@ -1,0 +1,9 @@
+.header {
+    background-color: var(--smoky-black);
+    height: clamp(250px, 600px, 50%);
+    padding-top: 20px;
+}
+
+.title {
+    margin: 0;
+}

@@ -6,4 +6,25 @@ html {
     --jonquil: #F7CB15;
     --sky-blue-crayola: #72DDF7;
     --coral: #FF8552;
+
+    user-select: none;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+#root {
+    height: 100%;
+}
+
+.wrapper {
+    height: 100%;
+    background-color: var(--smoky-black);
+    color: var(--white);
+    font-variant: normal;
+    font-family: 'Exo 2', sans-serif;
+
+    padding: 0 30px;
 }
