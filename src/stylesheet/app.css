@@ -1,12 +1,10 @@
 html {
     height: 100%;
-
-    --white: #fff;
+    --white: #D2D6EF;
     --smoky-black: #12130F;
     --jonquil: #F7CB15;
     --sky-blue-crayola: #72DDF7;
     --coral: #FF8552;
-
     user-select: none;
 }
 
@@ -25,6 +23,4 @@ body {
     color: var(--white);
     font-variant: normal;
     font-family: 'Exo 2', sans-serif;
-
-    padding: 0 30px;
 }

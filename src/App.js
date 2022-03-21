@@ -1,24 +1,27 @@
-import React from 'react';
-import './stylesheet/App.css'
-import Header from "./components/Header";
-import YouTube from "./components/YouTube";
+import React, {useEffect, useState} from 'react';
+import './stylesheet/app.css'
+import Header from "./components/small-components/Header";
+import {Routes} from "./routes";
+import {dynamicTitle, title} from "./config";
 
 const App = () => {
 
-    //1. Что Зачем - Header
+    useEffect(() => {
+        if (!dynamicTitle) document.title = title
+    })
+
+    //1. Что Зачем - About
     // 2. Видео - YouTube
     // 3. Кто там будет - Participants
     // 4. Партнеры - Partners
     // 5. Праздник 20 лет (Розыгрыш шар за вопросы спикерам) - Celebration
     // 6. Мы в соц-сетях - Networks
+    const [Current, setCurrent] = useState(Routes[0].title)
 
     return (
         <div className={'wrapper'}>
-            <Header />
-
-            <YouTube />
-
-
+            <Header setCurrent={setCurrent}/>
+            {Routes.map((route) => { if (route.title === Current) return <div key={route.title}>{route.component}</div> })}
         </div>
     );
 };

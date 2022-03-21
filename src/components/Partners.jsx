@@ -1,12 +1,11 @@
 import React from 'react';
 
-const YouTube = () => {
-
+const Partners = () => {
     return (
         <div>
-            YouTube
+            Partners
         </div>
     );
 };
 
-export default YouTube;
+export default Partners;
