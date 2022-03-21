@@ -9,49 +9,39 @@ const Header = ({setCurrent}) => {
     let [selected, setSelected] = useState(useNavBar)
 
     const Select = (block) => {
-
         let massive = selected.map((sel) => {
             if (block.title === sel.title) {
                 return {...sel, active: true}
             }
             return {...sel, active: false}
         })
-
-        if (dynamicTitle) {
-            document.title = block.title
-        }
-
+        if (dynamicTitle) document.title = block.title
         setSelected(massive)
         setCurrent(block.component)
     }
 
-    let lock = 0;
     const Next = (up) => {
-        lock++;
-        if (lock === 1) {
-            setTimeout(() => {
-                lock = 0;
-                let next = {}
-                for (let i = 0; i < selected.length; i++) {
-                    if (selected[i].active) {
-                        if (up) {
-                            if (i === selected.length - 1) {
-                                next = selected[0];
-                            } else {
-                                next = selected[i + 1];
-                            }
+        setTimeout(() => {
+            let next = {}
+            for (let i = 0; i < selected.length; i++) {
+                if (selected[i].active) {
+                    if (up) {
+                        if (i === selected.length - 1) {
+                            next = selected[0];
                         } else {
-                            if (i === 0) {
-                                next = selected[selected.length - 1];
-                            } else {
-                                next = selected[i - 1]
-                            }
+                            next = selected[i + 1];
+                        }
+                    } else {
+                        if (i === 0) {
+                            next = selected[selected.length - 1];
+                        } else {
+                            next = selected[i - 1]
                         }
                     }
                 }
-                Select(next)
-            }, scrollDelay)
-        }
+            }
+            Select(next)
+        }, scrollDelay)
     }
 
     const Wheel = (e) => {

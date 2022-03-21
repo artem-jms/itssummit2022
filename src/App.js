@@ -2,13 +2,13 @@ import React, {useEffect, useState} from 'react';
 import './stylesheet/app.css'
 import Header from "./components/small-components/Header";
 import {Routes} from "./routes";
-import {dynamicTitle, title} from "./config";
+import {dynamicTitle, navBar, title} from "./config";
 
 const App = () => {
 
     useEffect(() => {
-        if (!dynamicTitle) document.title = title
-    })
+        if (!dynamicTitle) { document.title = title } else document.title = navBar[0]
+    }, [])
 
     //1. Что Зачем - About
     // 2. Видео - YouTube
