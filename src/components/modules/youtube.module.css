@@ -1,28 +1,3 @@
-.yt {
-    background-color: var(--smoky-black);
-    display: flex;
-    flex-direction: column;
-    height: 80%;
-    padding-top: 100px;
-}
-
-.player {
-    height: 100%;
-}
-
-.player__default {
-    transition: 1s;
-    opacity: 0;
-    pointer-events: none;
-    z-index: 0;
-}
-
-
-
-@media screen and (max-width: 479px) {
-
-    .player {
-        max-height: 300px;
-    }
-
+.youtube{
+    padding-top:200px ;
 }
