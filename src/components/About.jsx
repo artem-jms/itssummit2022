@@ -5,7 +5,9 @@ const About = () => {
 
     return (
         <div className={module.container}>
-            <h1>ITS SUMMIT 2022</h1>
+            <div className={module.head}>
+                <h1>ITS SUMMIT 2022</h1>
+            </div>
         </div>
     );
 };
