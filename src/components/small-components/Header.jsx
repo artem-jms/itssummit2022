@@ -4,7 +4,7 @@ import classNames from "classnames";
 import {dynamicTitle, scrollDelay} from "../../config";
 import {useNavBar} from "../../hooks/useNavBar";
 
-const Header = ({setCurrent}) => {
+const Header = ({setCurrent, ref}) => {
 
     let [selected, setSelected] = useState(useNavBar)
 
@@ -50,7 +50,7 @@ const Header = ({setCurrent}) => {
 
     return (
         <div className={module.header}>
-            <div onWheel={Wheel} className={module.scroll}/>
+            <div className={module.scroll}/>
             <div className={module.header__child}>
                 {selected.map((block) =>
                     <div

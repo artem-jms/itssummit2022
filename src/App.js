@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, Suspense, useRef} from 'react';
 import './stylesheet/app.css'
 import Header from "./components/small-components/Header";
 import {Routes} from "./routes";
@@ -10,7 +10,7 @@ const App = () => {
         if (!dynamicTitle) { document.title = title } else document.title = navBar[0]
     }, [])
 
-    //1. Что Зачем - About
+    // 1. Что Зачем - About
     // 2. Видео - YouTube
     // 3. Кто там будет - Participants
     // 4. Партнеры - Partners
@@ -18,10 +18,22 @@ const App = () => {
     // 6. Мы в соц-сетях - Networks
     const [Current, setCurrent] = useState(Routes[0].title)
 
+    const Wheel = (e) => {
+        console.log(scrollRef)
+    }
+
+    const scrollRef = React.createRef()
+
     return (
-        <div className={'wrapper'}>
+        <div onWheel={Wheel} className={'wrapper'}>
             <Header setCurrent={setCurrent}/>
-            {Routes.map((route) => { if (route.title === Current) return <div key={route.title}>{route.component}</div> })}
+            <Suspense fallback={<div>12345</div>}>
+                {Routes.map((route) => {
+                    if (route.title === Current) return <div
+                        className={'content'}
+                        key={route.title}>{route.component}</div>
+                })}
+            </Suspense>
         </div>
     );
 };
