@@ -50,7 +50,7 @@ const Header = ({setCurrent, ref}) => {
 
     return (
         <div className={module.header}>
-            <div className={module.scroll}/>
+            <div onWheel={Wheel} className={module.scroll}/>
             <div className={module.header__child}>
                 {selected.map((block) =>
                     <div

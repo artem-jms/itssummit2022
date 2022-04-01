@@ -18,14 +18,8 @@ const App = () => {
     // 6. Мы в соц-сетях - Networks
     const [Current, setCurrent] = useState(Routes[0].title)
 
-    const Wheel = (e) => {
-        console.log(scrollRef)
-    }
-
-    const scrollRef = React.createRef()
-
     return (
-        <div onWheel={Wheel} className={'wrapper'}>
+        <div className={'wrapper'}>
             <Header setCurrent={setCurrent}/>
             <Suspense fallback={<div>12345</div>}>
                 {Routes.map((route) => {
