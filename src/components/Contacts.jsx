@@ -7,6 +7,8 @@ const Contacts = () => {
             <div className={module.head}>
                 <h1>Contacts</h1>
             </div>
+
+
         </div>
     );
 };
