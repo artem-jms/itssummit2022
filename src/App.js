@@ -1,4 +1,4 @@
-import React, {useEffect, useState, Suspense, useRef} from 'react';
+import React, {useEffect, useState, Suspense} from 'react';
 import './stylesheet/app.css'
 import Header from "./components/small-components/Header";
 import {Routes} from "./routes";
@@ -26,6 +26,7 @@ const App = () => {
                     if (route.title === Current) return <div
                         className={'content'}
                         key={route.title}>{route.component}</div>
+                    return <div></div>
                 })}
             </Suspense>
         </div>
