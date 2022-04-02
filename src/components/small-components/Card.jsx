@@ -12,4 +12,4 @@ const Card = ({image, description, link}) => {
     );
 };
 
-export default Card;
+export default Card;тз
