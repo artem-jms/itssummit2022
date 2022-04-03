@@ -1,10 +1,9 @@
-import React, {useEffect, useState, Suspense} from 'react';
+import React, {useEffect, Suspense} from 'react';
 import './stylesheet/app.css'
 import Header from "./components/small-components/Header";
 import {Routes} from "./routes";
 import {dynamicTitle, navBar, title} from "./config";
 import classNames from "classnames";
-import Cover from "./components/Cover";
 
 const App = () => {
 
@@ -18,18 +17,25 @@ const App = () => {
     // 4. Партнеры - Partners
     // 5. Праздник 20 лет (Розыгрыш шар за вопросы спикерам) - Celebration
     // 6. Мы в соц-сетях - Networks
-    const [Current, setCurrent] = useState(Routes[0].title)
-    const [position, setPosition] = useState('left')
+
+    const Scroll = (id) => {
+        const yOffset = -200;
+        const element = document.getElementById(id);
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        if (id !== 'About') {
+            window.scrollTo({top: y, behavior: 'smooth'});
+        } else window.scrollTo({top: 0, behavior: 'smooth'});
+    }
 
     return (
         <div className={'wrapper'}>
-            <Header setPosition={setPosition} setCurrent={setCurrent}/>
+            <Header Scroll={Scroll}/>
             <Suspense fallback={<div>12345</div>}>
                 {Routes.map((route) => {
-                    if (route.title === Current) return <div
+                    return <div
+                        id={route.title}
                         className={classNames('content')}
-                        key={route.title}><Cover position={position}>{route.component}</Cover></div>
-                    return <div key={route.title} />
+                        key={route.title}>{route.component}</div>
                 })}
             </Suspense>
         </div>

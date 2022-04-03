@@ -6,6 +6,10 @@ html {
     --sky-blue-crayola: #72DDF7;
     --coral: #FF8552;
     --light-green: #70EE9C;
+    --eminence: #772D8B;
+    --flax: #E9D985;
+    --orange: #FFD166;
+    --canary: #F8FA90;
     user-select: none;
 }
 
@@ -16,12 +20,12 @@ body {
 
 #root {
     height: 100%;
+    background-color: var(--white);
 }
 
 .wrapper {
-    height: 100%;
-    background-color: var(--smoky-black);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--smoky-black);
     font-variant: normal;
     font-family: 'Exo 2', sans-serif;
 }
