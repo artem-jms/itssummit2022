@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import module from './modules/about.module.css'
 import classNames from "classnames";
 

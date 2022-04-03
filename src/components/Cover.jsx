@@ -5,14 +5,13 @@ import module from "./modules/cover.module.css";
 const Cover = ({children, position}) => {
 
     useEffect(() => {
-        console.log(position)
         setActive(false)
         let timer = setTimeout(() => setActive(true), 300)
 
         return () => {
             clearTimeout(timer)
         }
-    }, [])
+    }, [position])
 
     const [active, setActive] = useState(false)
 
