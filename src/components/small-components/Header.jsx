@@ -4,7 +4,7 @@ import classNames from "classnames";
 import {dynamicTitle, scrollDelay} from "../../config";
 import {useNavBar} from "../../hooks/useNavBar";
 
-const Header = ({setCurrent, ref}) => {
+const Header = ({setCurrent, setPosition}) => {
 
     let [selected, setSelected] = useState(useNavBar)
 
@@ -26,12 +26,22 @@ const Header = ({setCurrent, ref}) => {
             for (let i = 0; i < selected.length; i++) {
                 if (selected[i].active) {
                     if (up) {
+                        if (window.innerWidth < 550) {
+                            setPosition('left')
+                        } else {
+                            setPosition('right')
+                        }
                         if (i === selected.length - 1) {
                             next = selected[0];
                         } else {
                             next = selected[i + 1];
                         }
                     } else {
+                        if (window.innerWidth < 550) {
+                            setPosition('left')
+                        } else {
+                            setPosition('left')
+                        }
                         if (i === 0) {
                             next = selected[selected.length - 1];
                         } else {

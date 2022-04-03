@@ -4,7 +4,7 @@ import module from './modules/youtube.module.css'
 const YouTube = () => {
 
     return (
-        <div className={module.container}>
+        <div className={module.content}>
             <div className={module.head}>
                 <h1>YouTube</h1>
             </div>

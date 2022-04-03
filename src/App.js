@@ -3,6 +3,8 @@ import './stylesheet/app.css'
 import Header from "./components/small-components/Header";
 import {Routes} from "./routes";
 import {dynamicTitle, navBar, title} from "./config";
+import classNames from "classnames";
+import Cover from "./components/Cover";
 
 const App = () => {
 
@@ -17,16 +19,17 @@ const App = () => {
     // 5. Праздник 20 лет (Розыгрыш шар за вопросы спикерам) - Celebration
     // 6. Мы в соц-сетях - Networks
     const [Current, setCurrent] = useState(Routes[0].title)
+    const [position, setPosition] = useState('left')
 
     return (
         <div className={'wrapper'}>
-            <Header setCurrent={setCurrent}/>
+            <Header setPosition={setPosition} setCurrent={setCurrent}/>
             <Suspense fallback={<div>12345</div>}>
                 {Routes.map((route) => {
                     if (route.title === Current) return <div
-                        className={'content'}
-                        key={route.title}>{route.component}</div>
-                    return <div></div>
+                        className={classNames('content')}
+                        key={route.title}><Cover position={position}>{route.component}</Cover></div>
+                    return <div key={route.title} />
                 })}
             </Suspense>
         </div>

@@ -3,9 +3,9 @@ import module from "./modules/celebration.module.css";
 
 const Celebration = () => {
     return (
-        <div className={module.container}>
+        <div className={module.content}>
             <div className={module.head}>
-                <h1>Celebration</h1>
+                <h1>YouTube</h1>
             </div>
         </div>
     );

@@ -1,0 +1,21 @@
+.container__left {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(-100px);
+}
+
+.container__right {
+    position: absolute;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(100px);
+}
+
+.container__active {
+    position: relative;
+    transition: 1s;
+    opacity: 1;
+    width: 100%;
+    transform: translateX(0);
+}
