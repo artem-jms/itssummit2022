@@ -25,7 +25,7 @@ export const title = 'ITS SUMMIT 2222'
 //Бумажки
 export const notes = ['#vpered', '#summit', '#2022', '#freeits', '#its', '#ITS']
 //Количество дубликатов бумажек
-export const notes_duplicates = 1
+export const notes_duplicates = 2
 //Цвета бумажек
 export const notes_colors = ['#F8FA90', '#FFD166', '#E9D985', '#70EE9C', '#FF8552', '#F7CB15']
 // Заголовок
@@ -45,4 +45,17 @@ export const description_card_about_2 = 'Ми обговоримо низку п
 // Кнопка
 export const button_card_about = 'Дивитися!'
 
+// YouTube
+
+// Дата начала в формате месяц/день
+export const date = '4/27'
+
+export const date_1 = 'До розмови по-душам 🖐🏻'
+export const date_description_1 = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+export const date_2 = 'Й можна буде подивитися 😱'
+export const date_description_2 = 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.'
+export const date_3 = 'І отримаєш шару 📙'
+export const date_description_3 = 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+export const date_4 = 'TEDed? ITSed 😎'
+export const date_description_4 = 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
 

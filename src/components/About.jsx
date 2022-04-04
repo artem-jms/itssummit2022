@@ -13,6 +13,14 @@ import Notes from "./small-components/Notes";
 
 const About = () => {
 
+    const ScrollToYouTube = () => {
+        console.log('1')
+        const yOffset = -200;
+        const element = document.getElementById('YouTubePlayer');
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({top: y, behavior: 'smooth'});
+    }
+
     return (
         <div className={classNames(module.content)}>
             <Notes />
@@ -33,7 +41,7 @@ const About = () => {
                             {description_card_about_1}<p />
                             {description_card_about_2}<p />
                             <div className={module.card__button}>
-                                <div className={module.card__button__content}>
+                                <div onClick={ScrollToYouTube} className={module.card__button__content}>
                                     {button_card_about}
                                 </div>
                             </div>

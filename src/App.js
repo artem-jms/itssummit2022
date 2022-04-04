@@ -19,7 +19,7 @@ const App = () => {
     // 6. Мы в соц-сетях - Networks
 
     const Scroll = (id) => {
-        const yOffset = -200;
+        const yOffset = -100;
         const element = document.getElementById(id);
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
         if (id !== 'About') {

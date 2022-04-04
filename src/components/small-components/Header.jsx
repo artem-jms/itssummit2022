@@ -17,8 +17,11 @@ const Header = ({Scroll}) => {
         })
         if (dynamicTitle) document.title = block.title
         setSelected(massive)
-        console.log(block)
-        Scroll(block.component)
+        if (block.component === 'YouTube') {
+            Scroll('YouTubePlayer')
+        } else {
+            Scroll(block.component)
+        }
     }
 
     return (

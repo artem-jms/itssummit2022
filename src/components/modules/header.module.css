@@ -1,6 +1,6 @@
 .header {
     position: sticky;
-    z-index: 1;
+    z-index: 5;
     border-top: none;
 
     width: 100%;
