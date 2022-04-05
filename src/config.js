@@ -1,3 +1,5 @@
+import {koshoviy, kosogor, lisovsky, strijak} from "./components/import";
+
 // Ссылка на запись (Только ютуб)
 export const YTLink = 'https://www.youtube.com/embed/sAQxanVqFns'
 
@@ -59,3 +61,57 @@ export const date_description_3 = 'Excepteur sint occaecat cupidatat non proiden
 export const date_4 = 'TEDed? ITSed 😎'
 export const date_description_4 = 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
 
+// Настройки спикеров
+
+// name - Имя, role - Кем будет на самите
+// description - Описание, color - цвет карточки
+// image - Ссылка на картинку из папки ./img
+// link - ссылка на телеграм (если не нужна оставить пустым)
+//
+
+export const Speaker = [
+    {
+        name: 'Kostyantin Lisovskiy',
+        role: 'Спікер',
+        description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.',
+        image: lisovsky,
+        link: 'https://t.me/kost_lisov',
+        color: '#FF8552',
+        iKts: true,
+        tk: false,
+        sr: true,
+    },
+    {
+        name: 'Anastasia Kosogor',
+        role: 'Спікер',
+        description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.',
+        image: kosogor,
+        link: '',
+        color: '#FFD166',
+        iKts: false,
+        tk: true,
+        sr: true,
+    },
+    {
+        name: 'Andriy Strijak',
+        role: 'Представник Студради',
+        description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.',
+        image: strijak,
+        link: '',
+        color: '#70EE9C',
+        iKts: true,
+        tk: false,
+        sr: true,
+    },
+    {
+        name: 'Koshoviy Evheniy',
+        role: 'Авторитет',
+        description: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.',
+        image: koshoviy,
+        link: '',
+        color: '#72DDF7',
+        iKts: true,
+        tk: false,
+        sr: true,
+    }
+]

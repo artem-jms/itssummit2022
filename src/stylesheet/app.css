@@ -30,6 +30,14 @@ body {
     font-family: 'Exo 2', sans-serif;
 }
 
+body::-webkit-scrollbar {
+    width: 0px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
 .content {
     transition: .3s;
     opacity: 1;
