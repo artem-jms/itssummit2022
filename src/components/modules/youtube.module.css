@@ -31,6 +31,27 @@
     font-weight: 600;
     text-transform: uppercase;
     color: var(--smoky-black);
+    text-shadow:
+            1px 1px 1px var(--flax),
+            2px -1px 1px var(--smoky-black);
+}
+
+.time__green {
+    text-shadow:
+            1px 1px 1px var(--light-green),
+            2px -1px 1px var(--light-green);
+}
+
+.time__blue {
+    text-shadow:
+            1px 1px 1px #7161EF,
+            2px -1px 1px var(--smoky-black);
+}
+
+.time__red {
+    text-shadow:
+            1px 1px 1px var(--coral),
+            2px -1px 1px var(--smoky-black);
 }
 
 .time_card {
@@ -69,7 +90,7 @@
 .time_card:hover {
     transition: .3s;
     z-index: 2;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     transform: scale(1.1);
     height: 160px;
     box-shadow: rgba(100, 100, 111, 0.3) 0 7px 29px 0;
@@ -85,7 +106,7 @@
     transition: .3s;
     opacity: 1;
     transform: translateY(0px);
-    padding-top: 15px;
+    padding-top: 5px;
     word-wrap: normal;
 }
 

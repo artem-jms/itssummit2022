@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import module from "../modules/about.module.css";
 import {notes, notes_colors, notes_duplicates} from "../../config";
 
-const Notes = () => {
+const Notes = ({limit}) => {
 
     useEffect(() => {
         let massive = []
@@ -11,7 +11,7 @@ const Notes = () => {
             for (let i = 0; i < notes.length; i++) {
                 let rotate = Math.random() * (30 - -30) + -30
                 let x =  Math.random() * window.innerWidth - 150
-                let y = Math.random() * 200
+                let y = Math.random() * limit
                 let opacity = Math.random() * (0.4 - 0.2) + 0.5
                 let color = notes_colors[Math.floor(Math.random() * notes_colors.length)]
                 massive.push({

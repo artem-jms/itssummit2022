@@ -5,8 +5,8 @@ export const YTLink = 'https://www.youtube.com/embed/sAQxanVqFns'
 export const navBar = [
     '🚀 Summit 2021',
     'Дивитися',
-    'Партнери + Спікери',
-    'Свято 20 Років',
+    'Партнери',
+    'Спікери',
     'Контакти',
 ]
 
@@ -23,9 +23,9 @@ export const title = 'ITS SUMMIT 2222'
 // Основная страница
 
 //Бумажки
-export const notes = ['#vpered', '#summit', '#2022', '#freeits', '#its', '#ITS']
+export const notes = ['#саміт', '#summit', '#2022', '#ітс', '#its', '#ITS', '#ІТС', '#ітсхаб']
 //Количество дубликатов бумажек
-export const notes_duplicates = 2
+export const notes_duplicates = 1
 //Цвета бумажек
 export const notes_colors = ['#F8FA90', '#FFD166', '#E9D985', '#70EE9C', '#FF8552', '#F7CB15']
 // Заголовок

@@ -23,7 +23,7 @@ const About = () => {
 
     return (
         <div className={classNames(module.content)}>
-            <Notes />
+            <Notes limit={250}/>
             <div className={module.title}>
                 <div>
                     <div className={module.title__head}>{title_about}</div>

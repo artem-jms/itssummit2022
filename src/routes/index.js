@@ -2,7 +2,7 @@ import About from "../components/About";
 import YouTube from "../components/YouTube";
 import Contacts from "../components/Contacts";
 import Partners from "../components/Partners";
-import Celebration from "../components/Celebration";
+import Speakers from "../components/Speakers";
 
 export const Routes = [
     {
@@ -14,12 +14,12 @@ export const Routes = [
         component: <YouTube />,
     },
     {
-        title: 'Partner',
-        component: <Partners />,
+        title: 'Speakers',
+        component: <Speakers />,
     },
     {
-        title: 'Celebration',
-        component: <Celebration />,
+        title: 'Partner',
+        component: <Partners />,
     },
     {
         title: 'Contacts',

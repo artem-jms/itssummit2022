@@ -10,6 +10,7 @@ import {
     date_description_2, date_description_3,
     date_description_4, YTLink
 } from "../config";
+import classNames from "classnames";
 
 const YouTube = () => {
 
@@ -49,7 +50,7 @@ const YouTube = () => {
             <div className={module.timer}>
                 <div className={module.timer__content}>
                     <div className={module.cards}>
-                        <div className={module.time}>{counter.days} Днів</div>
+                        <div className={classNames(module.time, module.time__green)}>{counter.days} Днів</div>
                         <div
                             style={{backgroundColor: colors[0]}} className={module.time_card}>
                             <div>{date_1}</div>
@@ -57,7 +58,7 @@ const YouTube = () => {
                         </div>
                     </div>
                     <div className={module.cards}>
-                        <div className={module.time}>{counter.hours} Годин</div>
+                        <div className={classNames(module.time)}>{counter.hours} Годин</div>
                         <div
                             style={{backgroundColor: colors[1]}} className={module.time_card}>
                             <div>{date_2}</div>
@@ -65,7 +66,7 @@ const YouTube = () => {
                         </div>
                     </div>
                     <div className={module.cards}>
-                        <div className={module.time}>{counter.minutes} Хвилин</div>
+                        <div className={classNames(module.time, module.time__blue)}>{counter.minutes} Хвилин</div>
                         <div
                             style={{backgroundColor: colors[2]}} className={module.time_card}>
                             <div>{date_3}</div>
@@ -73,7 +74,7 @@ const YouTube = () => {
                         </div>
                     </div>
                     <div className={module.cards}>
-                        <div className={module.time}>{counter.seconds} Секунд</div>
+                        <div className={classNames(module.time, module.time__red)}>{counter.seconds} Секунд</div>
                         <div
                             style={{backgroundColor: colors[3]}} className={module.time_card}>
                             <div>{date_4}</div>

@@ -2,15 +2,16 @@ import React from 'react';
 import module from "./modules/celebration.module.css";
 import Notes from "./small-components/Notes";
 
-const Celebration = () => {
+const Speakers = () => {
     return (
         <div className={module.content}>
-            <div className={module.head}>
-                <h1>Партнери + Спікери</h1>
+
+            <div className={module.header}>
+                <div>Спікери</div>
             </div>
-            <Notes />
+            <Notes limit={20}/>
         </div>
     );
 };
 
-export default Celebration;
+export default Speakers;
