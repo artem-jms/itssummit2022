@@ -26,7 +26,7 @@ const Notes = ({limit}) => {
         }
 
         setItems(massive)
-    }, [])
+    }, [limit])
 
 
     const [items, setItems] = useState([])
