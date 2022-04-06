@@ -1,4 +1,4 @@
-import {koshoviy, kosogor, lisovsky, strijak} from "./components/import";
+import {glavniy, koshoviy, kosogor, lisovsky, strijak} from "./components/import";
 
 // Ссылка на запись (Только ютуб)
 export const YTLink = 'https://www.youtube.com/embed/sAQxanVqFns'
@@ -179,5 +179,19 @@ export const Speaker = [
         iKts: false,
         tk: false,
         sr: false,
+    },
+]
+
+
+// Партнери
+
+export const partners = [
+    {
+        title: 'Nokia',
+        image: glavniy,
+    },
+    {
+        title: 'ITS',
+        image: glavniy,
     },
 ]
