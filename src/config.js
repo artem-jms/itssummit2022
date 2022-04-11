@@ -9,7 +9,6 @@ export const navBar = [
     'Дивитися',
     'Партнери',
     'Спікери',
-    'Контакти',
 ]
 
 // Задержка скорости скролла страниц в мс. (Стандартное значение 150)
@@ -167,7 +166,7 @@ export const Speaker = [
         color: '#AD5D4E',
         iKts: false,
         tk: false,
-        sr: true,
+        sr: false,
     },
     {
         name: 'Євген Баличев',

@@ -4,12 +4,7 @@ import Notes from "./small-components/Notes";
 
 const Contacts = () => {
     return (
-        <div className={module.content}>
-            <div className={module.head}>
-                <h1>Contacts</h1>
-            </div>
-            <Notes />
-        </div>
+        <></>
     );
 };
 

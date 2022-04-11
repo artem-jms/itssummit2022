@@ -55,6 +55,7 @@
 }
 
 .time_card {
+    cursor: pointer;
     margin-left: 10px;
     width: 50%;
     height: 80px;
@@ -80,7 +81,7 @@
 }
 
 .cards {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -103,6 +104,30 @@
 }
 
 .time_card:hover span {
+    transition: .3s;
+    opacity: 1;
+    transform: translateY(0px);
+    padding-top: 5px;
+    word-wrap: normal;
+}
+
+.time_card__active {
+    cursor: inherit;
+    transition: .3s;
+    z-index: 2;
+    margin-bottom: 5px;
+    transform: scale(1.1);
+    height: 160px;
+    box-shadow: rgba(100, 100, 111, 0.3) 0 7px 29px 0;
+}
+
+.time_card__active div {
+    transition: .3s;
+    padding-top: 15px;
+    padding-bottom: 0;
+}
+
+.time_card__active span {
     transition: .3s;
     opacity: 1;
     transform: translateY(0px);
@@ -147,8 +172,27 @@
         width: 80%;
     }
 
+    .time_card__active {
+        transition: 1s;
+        min-height: 300px;
+    }
+
     .time_card:hover {
         transform: scale(1);
         height: 200px;
+    }
+
+    .youtube {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .youtube {
+        height: 500px;
+    }
+
+    .youtube_player {
+        height: 300px;
     }
 }

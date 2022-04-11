@@ -9,14 +9,8 @@ const Header = ({Scroll}) => {
     let [selected, setSelected] = useState(useNavBar)
 
     const Select = (block) => {
-        let massive = selected.map((sel) => {
-            if (block.title === sel.title) {
-                return {...sel, active: true}
-            }
-            return {...sel, active: false}
-        })
+        setSelected(selected)
         if (dynamicTitle) document.title = block.title
-        setSelected(massive)
         if (block.component === 'YouTube') {
             Scroll('YouTubePlayer')
         } else {
@@ -31,14 +25,11 @@ const Header = ({Scroll}) => {
                     <div
                         key={block.title}
                         onClick={() => {
-                            if (!block.active) Select(block)
+                            Select(block)
                         }}
-                        className={classNames(module.block, {[module.block__active] : block.active})}>
+                        className={classNames(module.block)}>
                         {block.title}
-                        <span className={classNames(
-                            {[module.block__selected__active]: block.active},
-                            module.block__selected,
-                        )}/>
+                        <span className={classNames(module.block__selected)}/>
                     </div>
                 )}
             </div>

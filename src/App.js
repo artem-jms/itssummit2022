@@ -30,7 +30,7 @@ const App = () => {
     return (
         <div className={'wrapper'}>
             <Header Scroll={Scroll}/>
-            <Suspense fallback={<div>12345</div>}>
+            <Suspense fallback={<div>Loading</div>}>
                 {Routes.map((route) => {
                     return <div
                         id={route.title}

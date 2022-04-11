@@ -6,7 +6,7 @@ import {ikts, sr, telegram, tk} from "../import";
 const Modal = ({setModal, modal}) => {
 
     const Close = () => {
-        setTimeout(() => setModal({...modal, active: false}), 100)
+        setTimeout(() => setModal({...modal, active: false}), 0)
     }
 
     return (
@@ -23,7 +23,8 @@ const Modal = ({setModal, modal}) => {
                         {modal.value.description}
                     </div>
                     <div className={md.footer}>
-                        <div className={md.footer__content}>
+                        <div className={classNames(md.footer__content, {[md.has__content]:
+                                ((modal.value.sr === false) && !modal.value.iKts && !modal.value.tk)})}>
                             {modal.value.link !== '' &&
                                 <div onClick={() => window.open(modal.value.link)}
                                      style={{cursor: 'pointer', borderRadius: '50%'}}>

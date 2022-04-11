@@ -37,7 +37,15 @@
 .block:hover {
     transition: .3s;
     color: var(--coral);
-    cursor: pointer;
+    font-weight: 500;
+}
+
+.block:hover span {
+    opacity: 1;
+    width: 100%;
+    background: var(--coral);
+    transition: .3s;
+    top: calc(100% + 10px);
 }
 
 .block__active {

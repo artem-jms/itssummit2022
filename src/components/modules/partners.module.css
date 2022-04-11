@@ -59,3 +59,10 @@
     background-color: var(--white);
     font-size: 30px;
 }
+
+
+@media screen and (max-width: 769px) {
+    .header {
+        font-size: 40px;
+    }
+}
